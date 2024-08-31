@@ -11,6 +11,10 @@ def main():
     for salary in employee.salaries:
         print(salary)
 
+    print("Salary 1")
+    salary = session.query(Salary).get(1)
+    print(salary, salary.employee)
+
     employee.salaries.append(
         Salary(amount=50000, bonus=5000)
     )
